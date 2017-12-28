@@ -3,7 +3,8 @@
 #git
 git remote add origin *repo.git
 git clone *repo.git
-
+git push -u origin master #first time push to remote repo
+git push origin master
 
 #vim
 
