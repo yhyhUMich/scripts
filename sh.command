@@ -10,10 +10,16 @@ git push origin master
 
 #tmux
 tmux ls
-tmux attach-session *
+tmux attach-session -t *
 tmux new -s * #start new session
 tmux detach #leave current session
 tmux kill-server #close all session
+
+ctrl B % #split up down
+ctrl B " #split left right
+ctrl B x #close current panel
+ctrl B : #enter terminal
+
 
 #shell
 export ${VAR} #export this env_var to every shell environment from this
