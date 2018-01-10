@@ -29,3 +29,10 @@ yum install *
 yum remove *
 yum update
 
+#gcc
+gcc -E hello.cpp -o hello.i #preprocess
+gcc -s hello.cpp -o hello.s #preprocess and assembly
+gcc -c hello.cpp -o hello.o #preprocess, assembly and compile
+gcc hello.cpp -o hello #preprocess, assembly, compile and link generate exe
+
+
