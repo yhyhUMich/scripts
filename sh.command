@@ -68,9 +68,12 @@ poweroff / halt
 
 tar --bzip2 -xf *tar.bz2 #unzip tar.bz2
 
+tar xzf *.tar.gz -C /opt #x:extract z:using gunzip f:using the following archive file -C change dir to /opt
+
 #gcc
 gcc -E hello.cpp -o hello.i #preprocess
 gcc -s hello.cpp -o hello.s #preprocess and assembly
 gcc -c hello.cpp -o hello.o #preprocess, assembly and compile
 gcc hello.cpp -o hello #preprocess, assembly, compile and link generate exe
-=
+gcc -std=c++11 hello.cpp -o hello #...., using c+11
+
