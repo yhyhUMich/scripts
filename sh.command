@@ -29,8 +29,8 @@ tmux new -s * #start new session
 tmux detach #leave current session
 tmux kill-server #close all session
 
-ctrl B % #split up down
-ctrl B " #split left right
+ctrl B % #split left right
+ctrl B " #split up down 
 ctrl B x #close current panel
 ctrl B : #enter terminal
 
