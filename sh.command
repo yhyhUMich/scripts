@@ -11,6 +11,15 @@ $ #move to line end
 0 #move to line start
 G #move to start of the last line 
 12G #move to start of 12th line
+gg #move the first line
+
+10 | #move to the 10th column
+10 h/j/k/l #move 10 times in a direction
+
+f w #find the next w word in the line
+F w #fine the previous w word in the line
+
+ctrl G #show the line position
 
 de #del from cur the next word begin
 dw #del from cur to cur word end
@@ -21,6 +30,9 @@ ye #copy from cur the next word begin
 yw #copy from cur to cur word end
 y$ #copy from cur to line end
 y0 #copy from cur to line begin
+
+u #undo
+ctrl r #redo
 
 #tmux
 tmux ls
@@ -33,7 +45,6 @@ ctrl B % #split left right
 ctrl B " #split up down 
 ctrl B x #close current panel
 ctrl B : #enter terminal
-
 
 #shell
 export ${VAR} #export this env_var to every shell environment from this
@@ -84,6 +95,12 @@ whereis grep #find binary file man file and source file
 which gcc #find the first position of command gcc in PATH 
 
 type grep #find whether command grep is a shell builtin or a external binary
+
+grep -rni name #find the code lines with name, regard case, print line number, recursively search subdir
+
+grep -rni name1 | grep -v name2 #find code lines with name1 and without name2
+
+grep -rni -A 5 -B 5 name  #find code lines with name, also print after and before 5 lines
 
 #gcc
 gcc -E hello.cpp -o hello.i #preprocess
