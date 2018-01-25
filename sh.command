@@ -34,6 +34,15 @@ y0 #copy from cur to line begin
 u #undo
 ctrl r #redo
 
+/ word #find word
+n shift n #continue search next or previous
+* #search the cursor word next
+# #search the cursor word previous
+
+w #move to the next word
+b #move to the previous word
+o #start a new line
+
 #tmux
 tmux ls
 tmux attach-session -t *
