@@ -73,13 +73,24 @@ tar xzf *.tar.gz -C /opt #x:extract z:using gunzip f:using the following archive
 env 	#list all environment variables
 which 	#locate the command
 
+find <dir> -name 'name*' -ls	#find file with name name* in dir and ls it
+find . -type f -mmin -10		#find in current dir type is regular file which has been modified in the last 10 min
+
+locate /etc/sdf	#locate=find by name, find in dir /etc with file name start with sdf
+locate -i ~/cma #find by name in home dir with cma start name ignore case
+
+whereis grep #find binary file man file and source file
+
+which gcc #find the first position of command gcc in PATH 
+
+type grep #find whether command grep is a shell builtin or a external binary
+
 #gcc
 gcc -E hello.cpp -o hello.i #preprocess
 gcc -s hello.cpp -o hello.s #preprocess and assembly
 gcc -c hello.cpp -o hello.o #preprocess, assembly and compile
 gcc hello.cpp -o hello #preprocess, assembly, compile and link generate exe
 gcc -std=c++11 hello.cpp -o hello #...., using c+11
-
 
 #cmake
 cmake -H. -Bbuild #generate cmake binary tree in "build" dir using source file in "." dir -H:CMAKE_SOURCE_DIR  -B:CMAKE_BINARY_DIR
