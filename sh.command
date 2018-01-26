@@ -43,6 +43,13 @@ w #move to the next word
 b #move to the previous word
 o #start a new line
 
+zo #open current fold
+zR #open All fold
+zc #close fold
+zM #close all fold
+zj #move to next fold
+zk #move to previous fold
+
 #tmux
 tmux ls
 tmux attach-session -t *
@@ -110,6 +117,10 @@ grep -rni name #find the code lines with name, regard case, print line number, r
 grep -rni name1 | grep -v name2 #find code lines with name1 and without name2
 
 grep -rni -A 5 -B 5 name  #find code lines with name, also print after and before 5 lines
+
+ctrl + # increase the screen
+ctrl - # decrease the screen
+ctrl - # scale to original screen
 
 #gcc
 gcc -E hello.cpp -o hello.i #preprocess
