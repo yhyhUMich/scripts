@@ -50,6 +50,12 @@ zM #close all fold
 zj #move to next fold
 zk #move to previous fold
 
+i #insert before the current cursor
+r #repace the current cursor
+a #append after the current cursor
+
+Crtl - v #enter the column edit mode
+
 #tmux
 tmux ls
 tmux attach-session -t *
@@ -102,6 +108,9 @@ which 	#locate the command
 
 find <dir> -name 'name*' -ls	#find file with name name* in dir and ls it
 find . -type f -mmin -10		#find in current dir type is regular file which has been modified in the last 10 min
+
+wc -l `find . -name "*.*"` count number of lines of all the files in the current dir
+wc file #count words bytes lines of a file
 
 locate /etc/sdf	#locate=find by name, find in dir /etc with file name start with sdf
 locate -i ~/cma #find by name in home dir with cma start name ignore case
