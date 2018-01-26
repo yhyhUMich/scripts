@@ -56,6 +56,9 @@ a #append after the current cursor
 
 Crtl - v #enter the column edit mode
 
+"+yy #copy the current line into system reg
+"+p #paste the system reg into vim 
+
 #tmux
 tmux ls
 tmux attach-session -t *
@@ -130,6 +133,9 @@ grep -rni -A 5 -B 5 name  #find code lines with name, also print after and befor
 ctrl + # increase the screen
 ctrl - # decrease the screen
 ctrl - # scale to original screen
+
+ctrl insert #copy from terminal
+shift insert #insert
 
 #gcc
 gcc -E hello.cpp -o hello.i #preprocess
