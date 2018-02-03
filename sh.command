@@ -25,6 +25,7 @@ de #del from cur the next word begin
 dw #del from cur to cur word end
 d$ #del from cur to line end
 d0 #del from cur to line begin
+D #del from cur to line end
 
 ye #copy from cur the next word begin
 yw #copy from cur to cur word end
@@ -57,7 +58,7 @@ a #append after the current cursor
 Crtl - v #enter the column edit mode
 
 "+yy #copy the current line into system reg
-"+p #paste the system reg into vim 
+"+p #paste the system reg into vim
 
 #tmux
 tmux ls
@@ -75,10 +76,12 @@ ctrl B : #enter terminal
 export ${VAR} #export this env_var to every shell environment from this
 
 #!/bin/bash #tell use which shell to execute this sh script
-source *.sh #execute shell file in the cur shell
-*.sh #execute the shell file in sub shell
+source *.sh #execute shell file in the cur shell within the same process inherit all the value
+./*.sh #execute the shell file in sub shell, other process, all the value define in the subshell won't exist in the call shell
+bash #same with ./
+sh #if sh->bash then same with ./
 
-var_test = "test" #define var
+var_test="test" #define var remember without space 
 unset var_test #release var
 readonly var_test #set var as readonly
 echo $var_test 
@@ -136,6 +139,9 @@ ctrl - # scale to original screen
 
 ctrl insert #copy from terminal
 shift insert #insert
+
+command ls #execute a command
+command -v ls #show ls's execute path
 
 #gcc
 gcc -E hello.cpp -o hello.i #preprocess

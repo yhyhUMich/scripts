@@ -1,0 +1,105 @@
+#!/bin/bash
+
+shtest="haha"
+echo ${shtest}
+
+shtest2="hehe"
+echo ${shtest} ${shtest2}
+
+echo ${#shtest}
+
+echo ${shtest:1:2}
+
+echo `expr index "${shtest}" a`
+
+if [ 10 -gt 5 ] #gt et lt greater/equal/less than 
+then
+echo ssh_found
+fi
+
+for file in `ls`
+do
+echo ${file}
+done
+
+#while 
+#do
+#echo while_test 
+#done
+
+case "${opt}" in
+	"test1" )
+		echo test1
+	;;
+
+	"test2" )
+		echo test2
+	;;
+
+	* )
+		echo default
+	;;
+esac
+
+echo "first arg $1" #"" can include parameter
+echo "second arg $2"
+
+echo "arg number $#"
+echo "all arg in one string $*"
+echo "all arg in separate string $@"
+
+echo "current pid $$"
+
+read -p "enter a word: " input
+echo "read $input"
+
+read -p "enter a word again"
+echo $REPLY
+
+read -p "enter two words: " one two
+echo "two words : $one $two"
+
+if [ -f sh.command ] #[  ] is shortcut for the test command / -f file exist and is a regular file
+#test -x test whether a file exists and executable
+then 
+echo "file exist"
+fi
+
+if test -f sh.command 
+then 
+echo "file exist"
+fi
+
+#[ expr ] = test expr
+#[ a = b ] have to use space between operator and operand
+#[[]] better [], can use =~ < some other features
+
+t="abc123"
+if [[ "$t" == abc* ]]
+then
+echo "true"
+else
+echo "false"
+fi
+
+if [[ "$t" == "abc*" ]]
+then
+echo "true"
+else
+echo "false"
+fi
+
+if [[ "$t" =~ [abc]+[123]+ ]]
+then
+echo "true"
+else
+echo "false"
+fi
+
+if [[ "$t" == "abc*" ]]
+then
+echo "true"
+else
+echo "false"
+fi
+
