@@ -1,0 +1,14 @@
+#!/usr/bash
+/etc/services #record service port and protocol
+
+/var/run #record every daemon's pid after they were called
+
+/etc/init.d #directory that saves all the daemon's initialize scripts
+
+/etc/sysconfig #directory that saves setup scripts for daemons in REDHAT/CENTOS, but not in DEBIAN/UBUNTU
+
+/etc/xinetd.conf /etc/xinetd.d #inetd, xientd are both super daemon
+
+/etc #directory that saves all the configuaration scripts
+
+/var/lib #services generated database

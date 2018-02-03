@@ -154,3 +154,21 @@ gcc -std=c++11 hello.cpp -o hello #...., using c+11
 cmake -H. -Bbuild #generate cmake binary tree in "build" dir using source file in "." dir -H:CMAKE_SOURCE_DIR  -B:CMAKE_BINARY_DIR
 
 cmake --build build #build cmake generated binary tree
+
+
+#system
+/etc/init.d/** #control service by its init scripts
+
+service rsysconifg #call the service config file under /etc/init.d
+service --status-all #show all status of the stand alone service
+
+service crond restart
+/etc/init.d crond restart #restart the crond daemon in two methods
+
+netstat -tulpn #show all the service that support network that listening on certain port
+
+netstat -lnp #show the listening services and active socket 
+
+sysv-rc-conf --list | grep '5:on' #find all the services that be set to turn on in level 5 mode
+
+#if we want to add our own service as would be run when computer boot we use the command sysv-rc-conf --add/--del
