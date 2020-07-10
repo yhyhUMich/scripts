@@ -1,5 +1,11 @@
 #shell command record - hang
 
+# scp
+scp -P 50022 -r dir_source hang@11.11.11.11:dir_target
+
+#ssh-keygen
+ssh-keygen -t rsa -C "hangyuan@umich.edu"
+
 #git
 git remote add origin *repo.git
 git clone *repo.git

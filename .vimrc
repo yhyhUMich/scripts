@@ -7,8 +7,6 @@ set tabstop=4
 set softtabstop=4
 set hlsearch
 
-set foldmethod=syntax
-
-set mouse=a
-
-nnoremap d "_d
+"set foldmethod=syntax
+"set mouse=a
+"nnoremap d "_d
