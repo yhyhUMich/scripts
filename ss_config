@@ -1,0 +1,9 @@
+{
+	"server": "us-1.v2speed.net",
+	"server_port": 58075,
+	"local_address": "127.0.0.1",
+	"local_port": 1080,
+	"password": "Gvu0iAKt5R", 
+	"timeout": 500,
+	"method": "aes-256-cfb"
+}
